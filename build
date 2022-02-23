@@ -1,2 +1,2 @@
 #! /bin/bash
-docker build . -t photos
+docker build . -t photo-workflow
