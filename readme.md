@@ -23,7 +23,7 @@ I've tested this on LUbuntu 20.04 using both the included QTerminal and [Kitty](
 ## Usage
 
 ```bash
-docker build . -t photos
+./build (has the `docker build` command)
 ./photos DIR (has the `docker run` command with the necessary X11 args)
 ```
 
