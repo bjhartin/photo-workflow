@@ -1,0 +1,4 @@
+#! /bin/bash
+mkdir -p /home/hartbr/Dropbox/Pictures/Tags/$1
+file=$(readlink -f $2)
+ln -s $file /home/hartbr/Dropbox/Pictures/Tags/$1/$(uuid)
