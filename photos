@@ -1,3 +1,5 @@
 #! /bin/bash
-docker run --rm --net=host -it -v $1:/root/Pictures -v /tmp/.X11-unix:/tmp/.X11-unix -e _NET_WM_PID=2387 -e TERM -e DISPLAY -v "$HOME/.Xauthority:/root/.Xauthority:rw" photos
+
+# NOTE: I think some options may be unneeded - some might be leftovers from experimentation.
+docker run --rm --net=host -it -v $1:/root/Pictures -v /tmp/.X11-unix:/tmp/.X11-unix -e _NET_WM_PID=2387 -e TERM -e DISPLAY -v "$HOME/.Xauthority:/root/.Xauthority:rw" photo-workflow
 
