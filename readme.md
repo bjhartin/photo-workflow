@@ -1,7 +1,5 @@
 # photo-workflow
 
-## TL/DR;
-
 It's a dockerized IDE-like environment for managing photos using [ranger](https://github.com/ranger/ranger).
 
 I needed to comb through a few tens of thousands of photos recently for a family event.  Traditional photo management software was too slow.  I needed an IDE for photos!
