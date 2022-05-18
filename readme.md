@@ -20,6 +20,10 @@ It uses X11 event forwarding so that it can render images in the host system's t
 
 I've tested this on LUbuntu 20.04 using both the included QTerminal and [Kitty](https://sw.kovidgoyal.net/kitty/) terminal emulators.
 
+## Known Limitations
+
+- Running through emulated linux environments such as git-bash will likely not work due to terminal emulation differences / issues
+
 ## Usage
 
 ```bash
