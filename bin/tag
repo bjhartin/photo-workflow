@@ -1,4 +1,16 @@
 #! /bin/bash
-mkdir -p /home/hartbr/Dropbox/Pictures/Tags/$1
+tag=$1
+tagdir="/home/hartbr/Dropbox/Pictures/Tags/$tag"
+mkdir -p $tagdir
+chown hartbr:hartbr $tagdir
 file=$(readlink -f $2)
-ln -s $file /home/hartbr/Dropbox/Pictures/Tags/$1/$(uuid)
+existing_links=$(find $tagdir -type l -exec readlink -f {} \; | grep "$file")
+if ! [[ "$existing_links" == "" ]];then
+  echo "It exists already:"
+  echo $existing_links
+  exit 1
+else
+  tagid=$(uuid)
+  echo "Tagging as $tagid"  
+  ln -s $file $tagdir/$tagid
+fi

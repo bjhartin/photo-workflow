@@ -1,0 +1,3 @@
+#! /bin/bash
+tag For_Celebration_Young_Fishing "$(pwd)/$1"
+
